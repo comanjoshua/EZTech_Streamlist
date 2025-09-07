@@ -1,0 +1,82 @@
+/*
+  Course: INT-499 Capstone in Information Technology
+  Instructor: John Russel
+  Joshua Coman
+*/
+
+.streamlist-container {
+  margin: 100px auto 0; /* leave space for navbar */
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.streamlist-container h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #001f3f; /* navy headings inside StreamList */
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons inside StreamList */
+.input-group button {
+  padding: 8px 12px;
+  background-color: #001f3f;  /* navy */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-group button:hover {
+  background-color: #004080;  /* lighter navy */
+}
+
+/* List of items */
+.items-list {
+  list-style: none;
+  padding: 0;
+}
+
+.items-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+/* Completed items */
+.items-list li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Item action buttons */
+.item-buttons button {
+  background: none;
+  border: none;
+  margin-left: 6px;
+  cursor: pointer;
+  color: #001f3f; /* navy */
+  font-size: 1rem;
+}
+
+.item-buttons button:hover {
+  color: #004080; /* lighter navy */
+}

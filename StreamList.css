@@ -1,0 +1,30 @@
+/*
+  Course: INT-499 Capstone in Information Technology
+  Instructor: John Russel
+  Joshua Coman
+*/
+
+.streamlist-container {
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.streamlist-container input {
+  width: 70%;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.streamlist-container button {
+  padding: 8px 12px;
+}
+
+.streamlist-container ul {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}

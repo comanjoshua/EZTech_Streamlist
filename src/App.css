@@ -1,0 +1,83 @@
+/*
+  Course: INT-499 Capstone in Information Technology
+  Instructor: John Russel
+  Joshua Coman
+*/
+
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f2f2f2;  /* light grey page background */
+  color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #001f3f;   /* navy */
+  padding: 1rem 2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #ffcc00; /* gold hover */
+}
+
+.navbar a.active {
+  border-bottom: 2px solid #ffcc00; /* gold underline for active page */
+}
+
+/* Content area */
+.content {
+  padding: 2rem;
+}
+
+/* Form elements (global) */
+form {
+  margin-top: 1rem;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+/* Global buttons */
+button {
+  padding: 0.5rem 1rem;
+  background-color: #001f3f;   /* navy */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #004080;   /* lighter navy on hover */
+}
+
+/* Page headings */
+h2 {
+  color: #001f3f;              /* navy headings */
+}

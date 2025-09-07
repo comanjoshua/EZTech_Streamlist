@@ -1,0 +1,40 @@
+/*
+  Course: INT-499 Capstone in Information Technology
+  Instructor: John Russel
+  Joshua Coman
+*/
+
+function Navbar() {
+  return (
+    <nav style={{ padding: "10px", background: "#333", color: "yellow" }}>
+      <h3>DEBUG: Navbar Loaded</h3> {/* 👈 add this line */}
+      <ul style={{ display: "flex", gap: "20px", listStyle: "none", margin: 0, padding: 0 }}>
+        <li>
+          <NavLink to="/" style={{ color: "white", textDecoration: "none" }}>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/movies" style={{ color: "white", textDecoration: "none" }}>
+            Movies
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/cart" style={{ color: "white", textDecoration: "none" }}>
+            Cart
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" style={{ color: "white", textDecoration: "none" }}>
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/search" style={{ color: "white", textDecoration: "none" }}>
+            Search
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
+}
