@@ -1,3 +1,4 @@
+// src/components/Watchlist.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppState } from '../context/AppState';
@@ -36,7 +37,7 @@ export default function Watchlist() {
       <h2 className="text-xl font-semibold">Watchlist</h2>
       {watchlist.map((m) => (
         <div key={m.id} className="flex items-center gap-4 rounded-2xl bg-white p-4 shadow">
-          <a href={`/movie/${m.id}`} className="block">
+          <Link to={`/movie/${m.id}`} className="block">
             <Poster
               src={m.poster}
               alt={m.title}
@@ -44,11 +45,13 @@ export default function Watchlist() {
               h={96}
               className="h-24 w-16 flex-shrink-0 rounded object-cover transition hover:opacity-90"
             />
-          </a>
+          </Link>
+
           <div className="flex-1">
             <div className="font-medium">{m.title}</div>
             <div className="text-sm text-gray-600">{m.year}</div>
           </div>
+
           <button
             onClick={() => dispatch({ type: 'WATCH_REMOVE', id: m.id })}
             className="rounded-xl bg-red-600 px-3 py-2 text-white"

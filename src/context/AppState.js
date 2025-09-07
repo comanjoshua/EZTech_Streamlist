@@ -9,7 +9,7 @@ const STORAGE_KEY = 'streamlist.app.v1';
 const DEFAULT_STATE = {
   user: null,
   watchlist: [],
-  cart: [], // pending plan pick only
+  cart: [], // pending plan pick
   subscription: { plan: null, status: 'none', startedAt: null },
 };
 
@@ -27,11 +27,10 @@ function reducer(state, action) {
     case 'LOGIN':
       return { ...state, user: action.user };
 
-    // clear watchlist on logout
+    // keep watchlist + subscription; clear cart
     case 'LOGOUT':
-      return { ...state, user: null, cart: [], watchlist: [] };
+      return { ...state, user: null, cart: [] };
 
-    // optional full wipe button uses this
     case 'RESET_ALL':
       return { ...DEFAULT_STATE };
 
@@ -42,7 +41,7 @@ function reducer(state, action) {
     case 'WATCH_REMOVE':
       return { ...state, watchlist: state.watchlist.filter(m => m.id !== action.id) };
 
-    // plan selection
+    // cart
     case 'CART_SET_PLAN':
       return { ...state, cart: [{ id: 'subscription', title: 'StreamList Plan', plan: action.plan }] };
     case 'CART_CLEAR':
